@@ -1,42 +1,76 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0; 
+
+}
+
 header {
 
+  display: flex;
+	padding-top: 20px;
+	align-items: center;
+	justify-content: space-evenly; 
+	border-top: 2px solid #c9c8c8;
 
 }
 
 
 h2 {
 
+
+  border: 1px solid #000000;
 }
 
 .nav {
+  
+  display: flex;
+	padding-top: 20px;
+	align-items: center;
+	justify-content: space-evenly; 
+	border-top: 2px solid #c9c8c8;
 
+  
+}
 
-  }
-
-  li {
-
-
-  }
-
-  .content{
+li {
+  border: 1px solid #000000;
 
 }
 
-  .aside {
+  .content{
+    display: flex;
+  flex-wrap: wrap;
+}
 
+  .aside {
+    flex: 30%;
+    background-color: #eeeeee;
+    padding: 20px;
+    border: 1px solid #000000; 
   }
 
   .slidebox{
 
-   
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #000000; 
   }
 
   .article{
+
+    flex: 70%;
+    background-color: #eeeeee;
+    padding: 20px;
+    border: 1px solid #000000; 
 
   }
 
 
 .poem{
+  border: 1px solid #000000; 
 
 }
 
@@ -48,7 +82,7 @@ h2 {
 
   } 
 header{
-
+  display: none; 
 }
 }
 
@@ -56,17 +90,18 @@ header{
 @media (max-width:599px) {
 
 header,.content{
-
+  display:none; 
 }
 
 .nav {
-
+  flex-direction: column;
+ 
 
   }
 
 
 .nav > li {
-
+  margin: 20px 10px 10px 20px; 
 }
 
 

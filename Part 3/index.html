@@ -11,12 +11,9 @@
 let nombres  = ['Jorge','Isabel','Juan','Pedro','Karina','Jose','Arturo','Rogelio','Bertha'];
 
 
-
 /*
 
-Crea una funcion llamada: challenge1  que realice lo siguiente: 
 
-1) Pregunta el usuario cuantos botones necesita. 
 2) Por medio de un FOR  realizar los siguiente:
 
     i) En base el resultado de la pregunta 1) iterar el arreglo de nombres.
@@ -27,7 +24,15 @@ Crea una funcion llamada: challenge1  que realice lo siguiente:
 */
 
 // CREA TU FUNCION challenge1 aqui:
+function challenge1() {
+    var num = prompt("¿Cuantos botones necesitas?", 0); 
 
+    for (var i = 0; i < num; i++) {
+        var btn = document.createElement("BUTTON");   // Create a <button> element
+        btn.innerHTML = nombres[i];                   // Insert text
+        document.getElementById("dummy").appendChild(btn);   
+    }
+}
 
 
 /*
@@ -35,8 +40,11 @@ Crea una funcion llamada: challenge2 que utilizando un FOR convierta todos los n
 */
 
 // CREA TU FUNCION challenge2 2 aquí.
-
-
+function challenge2() {
+    for(var person of nombres) {
+        console.log(person.toUpperCase()); 
+    }
+}
 
 /*
 
@@ -69,7 +77,25 @@ Deberia escribir en consola
 
 // CREA TU FUNCION printInfo() AQUI
 
+function Dog(nombre, color, raza) {
+    this.nombre = nombre;
+    this.color = color;
+    this.raza = raza;
+}
 
+Dog.prototype.printInfo = function() {
+    console.log("Nombre: " + this.nombre + " , de color: " + this.color + " , raza: " + this.raza);
+};
+
+var fido = new Dog("Fido", "Cafe", "Poodle");
+var goliath = new Dog("Goliath", "Cafe", "Boxer");
+var scamp = new Dog("Scamp", "gris", "schnauzer"); 
+
+function challenge3() {
+    fido.printInfo(); 
+    goliath.printInfo(); 
+    scamp.printInfo(); 
+}
 
 
 </script>
@@ -80,7 +106,7 @@ Deberia escribir en consola
 
     <button onclick="challenge1()">Challenge 1</button>
     <button onclick="challenge2()">Challenge 2</button>
-    <button onclick="challenge3()">Challenge 2</button>
+    <button onclick="challenge3()">Challenge 3</button>
 
   
 <div id = "dummy">
